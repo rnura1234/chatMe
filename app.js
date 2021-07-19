@@ -5,11 +5,12 @@ const http = require('http');
 const app = express();
 const server = http.createServer(app);
 const io = socketIO(server);
+const {generateMessage,generateLocationMessage} = require('./utils/message');
 
 
 
 
-const publicPath=path.join(__dirname,'public');
+const publicPath = path.join(__dirname, '/public');
 app.use(express.static(publicPath));
 
 const port = 8000;
@@ -21,26 +22,19 @@ server.listen(port, () => {
 io.on('connection', (socket) => {
   console.log('a user just connected');
   
-  socket.emit('newMessage', {
-    from: 'Server',
-    text: 'welcome to chat app',
-    createAt: new Date().getTime()
-  });
+  socket.emit('newMessage', generateMessage('Admin','welcome to chat app !'));
  
-  socket.broadcast.emit('newMessage', {
-    from: 'Admin',
-    text: 'A new User joined in chat app',
-    createAt: new Date().getTime()
-    
-  })
+  socket.broadcast.emit('newMessage', generateMessage('Admin', 'A new User joined in chat app'));
 
   socket.on('createMessage', (message) => {
-    io.emit('newMessage', {
-      from: message.from,
-      text: message.text,
-      createAt: new Date().getTime()
-    });
+    io.emit('newMessage', generateMessage(message.from, message.text));
   });
+    
+  socket.on('createLocationMessage', (coord) => {
+    io.emit('newLocationMessage', generateLocationMessage("User",coord.lat,coord.lng));
+  });
+  
+  
   
 
 

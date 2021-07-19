@@ -1,0 +1,92 @@
+/* line 1, sass/bases/_typography.scss */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+/* line 6, sass/bases/_typography.scss */
+body {
+  background-color: #f7f7f7; }
+
+/* line 9, sass/bases/_typography.scss */
+.secondary__heading {
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: .5rem;
+  text-transform: uppercase;
+  white-space: nowrap;
+  margin-bottom: 3rem;
+  color: #fff; }
+
+/* line 1, sass/bases/_base.scss */
+.chat__person {
+  width: 100%;
+  height: 100vh;
+  padding: 5rem 4rem;
+  background: linear-gradient(to bottom right, #339966 -8%, #66ffcc 80%); }
+  /* line 7, sass/bases/_base.scss */
+  .chat__person--list {
+    margin-left: 1rem; }
+  /* line 10, sass/bases/_base.scss */
+  .chat__person--item {
+    font-size: 1.2rem;
+    color: #333;
+    line-height: 2rem; }
+
+/* line 16, sass/bases/_base.scss */
+.chat__message {
+  position: relative;
+  height: 100vh;
+  background: #f7f7f7;
+  padding: 2rem 1rem; }
+
+/* line 1, sass/components/_form.scss */
+.chat__form {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 2rem; }
+  /* line 7, sass/components/_form.scss */
+  .chat__form--input {
+    height: 2rem;
+    width: 70%;
+    padding: 0 2rem;
+    outline: 0.5rem solid #d1b5b5;
+    border: none; }
+
+/* line 1, sass/layout/_grid.scss */
+.row {
+  max-width: 114rem;
+  margin: 0 auto; }
+  /* line 6, sass/layout/_grid.scss */
+  .row:not(:last-child) {
+    margin-bottom: 4rem; }
+  /* line 2, sass/abstracts/_mixin.scss */
+  .row::after {
+    content: "";
+    display: table;
+    clear: both; }
+  /* line 11, sass/layout/_grid.scss */
+  .row [class^="col-"] {
+    float: left; }
+    /* line 15, sass/layout/_grid.scss */
+    .row [class^="col-"]:not(:last-child) {
+      margin-right: 4rem; }
+  /* line 21, sass/layout/_grid.scss */
+  .row .col-1-of-2 {
+    width: calc((100% - 4rem)/2); }
+  /* line 25, sass/layout/_grid.scss */
+  .row .col-1-of-3 {
+    width: calc((100% - 2* 4rem)/3); }
+  /* line 28, sass/layout/_grid.scss */
+  .row .col-2-of-3 {
+    width: calc(2* ((100% - 2 * 4rem)/3) + 4rem); }
+  /* line 31, sass/layout/_grid.scss */
+  .row .col-1-of-4 {
+    width: calc((100% - 3* 4rem)/4); }
+  /* line 34, sass/layout/_grid.scss */
+  .row .col-2-of-4 {
+    width: calc(2* ((100% - 3* 4rem)/4) + 4rem); }
+  /* line 38, sass/layout/_grid.scss */
+  .row .col-3-of-4 {
+    width: calc(3* ((100% - 3* 4rem)/4) + 2* 4rem); }

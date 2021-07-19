@@ -1,0 +1,14 @@
+.chat__form{
+  width: 100%;
+  
+  position: absolute;
+  left: 0;
+  bottom: 2rem;
+  &--input {
+  height: 2rem;
+  width: 70%;
+  padding: 0 2rem;
+  outline: .5rem solid rgb(209, 181, 181);
+  border: none;
+}
+}

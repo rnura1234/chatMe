@@ -1,0 +1,23 @@
+.chat__person{
+  width: 100%;
+  height: 100vh;
+  padding: 5rem 4rem;
+  background: linear-gradient(to bottom right, #339966 -8%, #66ffcc 80%);
+
+  &--list{
+    margin-left: 1rem;
+  }
+  &--item{
+    font-size: 1.2rem;
+    color:#333 ;
+    line-height: 2rem;
+  }
+}
+.chat__message{
+position: relative;
+height: 100vh;
+background: #f7f7f7;
+padding: 2rem 1rem;
+
+
+}

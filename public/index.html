@@ -1,19 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ChatMe</title>
-</head>
-<body>
-  <section>
-    <div class="row">
-     <p>the is real time chat app</p>
-    </div>
-  </section>
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>ChatMe</title>
+      <link rel="stylesheet" href="css/style.css" />
+   </head>
+   <body>
+      <section class="clearfix">
+         <div class="row">
+            <div class="col-1-of-4">
+               <div class="chat__person">
+                  <h2 class="secondary__heading">Persons</h2>
+                  <ol class="chat__person--list">
+                     <li class="chat__person--item">person</li>
+                     <li class="chat__person--item">person</li>
+                     <li class="chat__person--item">person</li>
+                  </ol>
+               </div>
+            </div>
+            <div class="col-3-of-4">
+               <div class="chat__message">
+                  <div class="chat__message--area">
+                     <ul class="chat__message--list">
+                        <li class="chat__message--item">Admin: hey sanjeev</li>
+                     </ul>
+                  </div>
+                  <div class="chat__form">
+                     <form action="">
+                        <input
+                           type="text"
+                           class="chat__form--input"
+                           name="message"
+                           id="sendMessage"
+                           placeholder="Message..."
+                        />
+                        <button
+                           type="submit"
+                           class="chat__form--submitBtn"
+                           id="submit-btn"
+                        >
+                           Send
+                        </button>
+                        <button
+                           type="button"
+                           class="chat__form--locationBtn"
+                           id="location-btn"
+                        >
+                           Get Locations
+                        </button>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
 
-  <script src="/socket.io/socket.io.js"></script>
-  <script src='js/clients.js'></script>
-</body>
+      <script src="/socket.io/socket.io.js"></script>
+      <script src="js/clients.js"></script>
+   </body>
 </html>
+<!-- <form class='form__message'action="">
+       <input type="text" name="message" id="sendMessage" placeholder="Message">
+       <button type="submit" id="submit-btn">Send</button>
+       <button type="button" id="location-btn">Get Locations</button>
+       
+     </form> -->

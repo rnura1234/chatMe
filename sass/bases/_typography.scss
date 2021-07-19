@@ -1,0 +1,19 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: #f7f7f7;
+}
+.secondary__heading{
+
+  font-size:1.6rem;
+  font-weight:700;
+  letter-spacing: .5rem;
+  text-transform: uppercase;
+  white-space: nowrap;
+  margin-bottom: $bottom-space;
+  color: #fff;
+
+}
